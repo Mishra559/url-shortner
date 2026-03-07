@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #F5F2EB;
+    color: #0D0D0D;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Syne', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-white font-display font-semibold px-6 py-3 rounded-none
+           hover:bg-accent-dark transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-paper
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply border border-ink text-ink font-display font-medium px-6 py-3 rounded-none
+           hover:bg-ink hover:text-paper transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-ink focus:ring-offset-2 focus:ring-offset-paper;
+  }
+
+  .input-field {
+    @apply w-full bg-white border border-border text-ink font-body
+           px-4 py-3 rounded-none outline-none
+           focus:border-ink transition-colors duration-200
+           placeholder:text-muted;
+  }
+
+  .card {
+    @apply bg-white border border-border p-6;
+  }
+
+  .tag {
+    @apply font-mono text-xs bg-cream text-muted px-2 py-1 border border-border;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F2EB;
+}
+::-webkit-scrollbar-thumb {
+  background: #D5D0C6;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8A8578;
+}
+
+/* Selection */
+::selection {
+  background-color: #E84B2B;
+  color: white;
+}
