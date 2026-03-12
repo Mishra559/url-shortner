@@ -1,4 +1,4 @@
-const API_BASE = "https://url-shortner-production-b438.up.railway.app";
+const API_BASE = "https://snip-io.up.railway.app";
 
 export async function createShortUrl(originalUrl) {
   const res = await fetch(`${API_BASE}/api/urls`, {
