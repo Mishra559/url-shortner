@@ -468,6 +468,3 @@ aws cloudfront create-invalidation --distribution-id YOUR_DIST_ID --paths "/*"
 
 ---
 
-## License
-
-MIT
